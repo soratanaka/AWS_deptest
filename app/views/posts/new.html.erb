@@ -1,8 +1,8 @@
-<form action="/posts" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="qbu8RFLhyCuAElg1qr7MLYDEdiEINJdEe1JLQFLr7kyWPFiHCEZKszOrvwON33s9CqGz7njGpBasOzrpYkb8/w==">
+<%= form_with(model: @post) do |form| %>
   <h1 class="new_page">新規投稿<h1>
   <div class="post_content">
-    <label for="post_content">Content</label>
-    <input type="text" name="post[content]">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
   </div>
-  <input type="submit" name="commit" value="Create Post" data-disable-with="Create Post">
-</form>
+  <%= form.submit %>
+<% end %>
