@@ -11,6 +11,27 @@
   </head>
 
   <body>
-    <%= yield %>
+  <header class="header clearfix">
+      <%= image_tag 'party_cracker.jpeg', class: 'head_img' %>
+    <nav>
+      <ul class="top_menu clearfix">
+        <%= link_to "投稿一覧画面にもどる", posts_path, class:'top_menu' %>
+      </ul>
+    </nav>
+  </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  <footer>
+　　<ul class="footer-menu">
+    <li>home ｜</li>
+    <li>about ｜</li>
+    <li>service ｜</li>
+    <li>Contact Us</li>
+  </ul>
+    <p>© All rights reserved by webcampnavi.</p>
+  </footer>
+
   </body>
 </html>

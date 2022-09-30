@@ -1,4 +1,4 @@
-<h1>投稿一覧</h1>
+<h1 width="100%">投稿一覧</h1>
 
 <p><%= notice %></p>
 
@@ -8,14 +8,14 @@
   </tr>
 
 <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.created_at %></td>
-    <td><%= post.content %></td>
-    <td><%= link_to '詳細を確認する', post_path(post.id) %></td>
-    <td><%= link_to "編集する", edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' } %></td>
-    <td><%= link_to '削除する', post_path(post.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+  <tr class="content_all">
+    <td width="20%"><%= l post.created_at %></td>
+    <td width="50%"><%= post.content %></td>
+    <td width="10%"><%= link_to '投稿確認する', post_path(post.id) %></td>
+    <td width="10%"><%= link_to "編集する", edit_post_path(post.id), data: { confirm: '本当に編集していいですか？' } %></td>
+    <td width="10%"><%= link_to '削除する', post_path(post.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
   </tr>
 <% end %>
 </table>
 
-<%= link_to '新しくブログを投稿する', new_post_path %>
+<%= link_to '新しく投稿する', new_post_path %>
